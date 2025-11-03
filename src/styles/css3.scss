@@ -1,0 +1,56 @@
+// This file contains SCSS styles specifically for the CSS3 topics component. 
+// It may define styles for animations, transitions, and visual effects.
+
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-stack: 'Helvetica Neue', sans-serif;
+
+body {
+    font-family: $font-stack;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: $primary-color;
+}
+
+.animation-example {
+    transition: all 0.3s ease;
+    
+    &:hover {
+        transform: scale(1.1);
+        background-color: $secondary-color;
+    }
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: $primary-color;
+    margin: 20px;
+    display: inline-block;
+    animation: fadeIn 1s ease-in-out;
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+}

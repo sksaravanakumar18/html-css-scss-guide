@@ -1,0 +1,131 @@
+/* --- General Layout & Page Header --- */
+                .page-container {
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+                    padding: 2rem;
+                    background-color: #f8f9fa;
+                }
+                .page-header {
+                    text-align: center;
+                    margin-bottom: 3rem;
+                }
+                .page-header h1 {
+                    font-size: 2.5rem;
+                    color: #212529;
+                }
+                .page-header p {
+                    font-size: 1.2rem;
+                    color: #6c757d;
+                }
+
+                /* --- Topic Card Layout --- */
+                .topic-section {
+                    background-color: #ffffff;
+                    border: 1px solid #dee2e6;
+                    border-radius: 12px;
+                    margin-bottom: 2.5rem;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+                    overflow: hidden; /* Contains child borders */
+                }
+                .topic-header {
+                    padding: 1.5rem;
+                    border-bottom: 1px solid #dee2e6;
+                }
+                .topic-header h2 {
+                    font-size: 1.75rem;
+                    margin: 0 0 0.5rem 0;
+                }
+                .topic-header p {
+                    font-size: 1.1rem;
+                    color: #495057;
+                    margin: 0;
+                }
+                .example-grid {
+                    display: grid;
+                    grid-template-columns: 1fr; /* Mobile first */
+                    gap: 0;
+                }
+                @media (min-width: 1024px) {
+                    .example-grid {
+                        grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
+                    }
+                }
+                .example-item {
+                    padding: 1.5rem;
+                }
+                .example-item + .example-item {
+                    border-top: 1px solid #e9ecef;
+                }
+                @media (min-width: 1024px) {
+                    .example-item:nth-child(odd) {
+                        border-right: 1px solid #e9ecef;
+                    }
+                    .example-item:nth-child(1), .example-item:nth-child(2) {
+                        border-bottom: 1px solid #e9ecef;
+                    }
+                }
+
+
+                /* --- Code Snippet & Result Display --- */
+                .code-result {
+                    display: flex;
+                    flex-direction: column;
+                }
+                .code-result h3 {
+                    font-size: 1.2rem;
+                    margin-bottom: 0.75rem;
+                    color: #343a40;
+                }
+                pre {
+                    background-color: #212529;
+                    color: #f8f9fa;
+                    padding: 1rem;
+                    border-radius: 8px;
+                    overflow-x: auto;
+                    font-family: 'SF Mono', 'Courier New', monospace;
+                    font-size: 0.875em;
+                    margin: 0 0 1rem 0;
+                }
+                .result-box {
+                    border: 1px solid #ced4da;
+                    border-radius: 8px;
+                    padding: 1rem;
+                    background-color: #f8f9fa;
+                    flex-grow: 1; /* Ensures it fills space */
+                    min-height: 120px;
+                }
+
+                /* --- SPECIFIC EXAMPLE STYLES --- */
+
+                /* Positioning */
+                .pos-container { position: relative; height: 150px; background: #e9ecef; border-radius: 4px; border: 1px solid #dee2e6; }
+                .pos-box { width: 60px; height: 60px; color: white; display: flex; align-items: center; justify-content: center; border-radius: 4px; }
+                .pos-relative { position: relative; top: 10px; left: 10px; background-color: #0d6efd; }
+                .pos-absolute { position: absolute; top: 20px; right: 20px; background-color: #6f42c1; }
+                .pos-fixed { position: fixed; bottom: 20px; right: 20px; background-color: #d63384; z-index: 100; padding: 1rem; box-shadow: 0 0 15px rgba(0,0,0,0.2); }
+                .sticky-container { height: 200px; overflow-y: auto; background-color: #e9ecef; border-radius: 4px; border: 1px solid #dee2e6; }
+                .pos-sticky { position: sticky; top: 0; background-color: #198754; text-align: center; }
+
+                /* Flexbox */
+                .flex-container { display: flex; height: 120px; background: #e9ecef; border-radius: 4px; padding: 5px; gap: 5px; }
+                .flex-item { background-color: #0d6efd; color: white; border-radius: 4px; padding: 10px; text-align: center; flex-basis: 60px; }
+                .flex-item-tall { height: 80px; line-height: 80px; }
+                .flex-col { flex-direction: column; }
+
+                /* Grid */
+                .grid-container { display: grid; height: 150px; background: #e9ecef; border-radius: 4px; padding: 5px; gap: 5px; }
+                .grid-item { background-color: #198754; color: white; border-radius: 4px; padding: 10px; text-align: center; }
+                .grid-span-2 { grid-column: span 2; }
+                .grid-row-span-2 { grid-row: span 2; }
+
+                /* Transitions & Transforms */
+                .transform-box { background-color: #0d6efd; color: white; padding: 1rem; text-align: center; border-radius: 8px; transition: transform 0.3s ease-in-out; }
+                .transform-box:hover { transform: rotate(-5deg) scale(1.1); }
+                .transition-box { background-color: #fd7e14; height: 80px; width: 80px; transition: all 0.4s ease-in-out; }
+                .transition-box:hover { background-color: #20c997; border-radius: 50%; }
+
+                /* Other Visuals */
+                .shadow-box { background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+                .gradient-box { height: 100px; border-radius: 8px; background: linear-gradient(to right, #0d6efd, #6610f2); }
+                .filter-image { transition: filter 0.3s ease; }
+                .filter-image:hover { filter: saturate(180%) contrast(120%); }
+            

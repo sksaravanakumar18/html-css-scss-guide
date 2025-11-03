@@ -1,0 +1,117 @@
+ 
+                /* --- General Layout & Page Header --- */
+                .page-container {
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+                    padding: 2rem;
+                    background-color: #f8f9fa;
+                }
+                .page-header {
+                    text-align: center;
+                    margin-bottom: 3rem;
+                }
+                .page-header h1 {
+                    font-size: 2.5rem;
+                    color: #212529;
+                }
+                .page-header p {
+                    font-size: 1.2rem;
+                    color: #6c757d;
+                }
+
+                /* --- Topic Card Layout --- */
+                .topic-section {
+                    background-color: #ffffff;
+                    border: 1px solid #dee2e6;
+                    border-radius: 12px;
+                    margin-bottom: 2.5rem;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+                }
+                .topic-header {
+                    padding: 1.5rem;
+                    border-bottom: 1px solid #dee2e6;
+                }
+                .topic-header h2 {
+                    font-size: 1.75rem;
+                    margin: 0 0 0.5rem 0;
+                }
+                .topic-header p.subtitle {
+                    font-size: 1.1rem;
+                    color: #495057;
+                    margin: 0;
+                }
+                .topic-content {
+                    display: grid;
+                    grid-template-columns: 1fr; /* Mobile first */
+                }
+                @media (min-width: 1024px) {
+                    .topic-content {
+                        grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
+                    }
+                }
+                .explanation, .code-result {
+                    padding: 1.5rem;
+                }
+                .explanation {
+                    border-bottom: 1px solid #e9ecef;
+                }
+                 @media (min-width: 1024px) {
+                    .explanation {
+                       border-right: 1px solid #e9ecef;
+                       border-bottom: none;
+                    }
+                }
+                .explanation ul {
+                    list-style-position: inside;
+                    padding-left: 0;
+                }
+                .explanation li {
+                    margin-bottom: 0.5rem;
+                }
+
+                /* --- Code Snippet & Result Display --- */
+                .code-result h3 {
+                    font-size: 1.2rem;
+                    margin: 0 0 1rem 0;
+                    color: #343a40;
+                }
+                pre {
+                    background-color: #212529;
+                    color: #f8f9fa;
+                    padding: 1rem;
+                    border-radius: 8px;
+                    overflow-x: auto;
+                    font-family: 'SF Mono', 'Courier New', monospace;
+                    font-size: 0.875em;
+                    margin: 0 0 1rem 0;
+                }
+                .result-box {
+                    border: 1px solid #ced4da;
+                    border-radius: 8px;
+                    padding: 1.5rem;
+                    background-color: #f8f9fa;
+                }
+
+                /* --- SPECIFIC EXAMPLE STYLES --- */
+                .form-preview div { margin-bottom: 1rem; }
+                .form-preview label { display: block; font-weight: 500; margin-bottom: 0.25rem; }
+                .form-preview input, .form-preview button { 
+                    width: 100%; 
+                    padding: 0.6rem; 
+                    border: 1px solid #d1d5db; 
+                    border-radius: 6px; 
+                    font-size: 1rem;
+                }
+                .form-preview button { 
+                    background-color: #0d6efd; 
+                    color: white; 
+                    cursor: pointer; 
+                    border: none;
+                    font-weight: 500;
+                }
+                .form-preview input[type="range"] { padding: 0; }
+                .form-preview output {
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    color: #0d6efd;
+                }
+                .form-preview p { color: #6c757d; font-size: 0.9rem; } 
